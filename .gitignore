@@ -2,3 +2,4 @@ dataset/
 data/
 *.pkl
 "dataset/" 
+"wandb/"
