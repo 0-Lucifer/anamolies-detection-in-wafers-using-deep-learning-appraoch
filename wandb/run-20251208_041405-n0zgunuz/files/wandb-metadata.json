@@ -1,0 +1,40 @@
+{
+  "os":  "Windows-11-10.0.26100-SP0",
+  "python":  "CPython 3.13.5",
+  "startedAt":  "2025-12-07T22:14:05.527446Z",
+  "program":  "PRWMF.ipynb",
+  "codePath":  "PRWMF.ipynb",
+  "codePathLocal":  "PRWMF.ipynb",
+  "git":  {
+    "remote":  "https://github.com/0-Lucifer/anamolies-detection-in-wafers-using-deep-learning-appraoch.git",
+    "commit":  "1650f9a7ed6a5c80917012f240f9c96ad808937a"
+  },
+  "email":  "jummaahammed@gmail.com",
+  "root":  "C:\\Users\\user\\Desktop\\project 465",
+  "host":  "DESKTOP-LM2G883",
+  "executable":  "C:\\Users\\user\\anaconda3\\python.exe",
+  "cpu_count":  14,
+  "cpu_count_logical":  20,
+  "gpu":  "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "511050772480",
+      "used":  "360287813632"
+    }
+  },
+  "memory":  {
+    "total":  "16886128640"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memoryTotal":  "6439305216",
+      "cudaCores":  2560,
+      "architecture":  "Ada",
+      "uuid":  "GPU-f54cbecd-7e7c-d5b4-6109-775b33748f33"
+    }
+  ],
+  "cudaVersion":  "13.0",
+  "writerId":  "xukdvxw2n6d77q8ii72vxr0bnfdp5039"
+}

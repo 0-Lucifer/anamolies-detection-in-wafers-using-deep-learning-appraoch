@@ -1,0 +1,133 @@
+2025-12-08 14:41:54,169 INFO    MainThread:35156 [wandb_setup.py:_flush():80] Current SDK version is 0.23.1
+2025-12-08 14:41:54,170 INFO    MainThread:35156 [wandb_setup.py:_flush():80] Configure stats pid to 35156
+2025-12-08 14:41:54,170 INFO    MainThread:35156 [wandb_setup.py:_flush():80] Loading settings from C:\Users\user\.config\wandb\settings
+2025-12-08 14:41:54,170 INFO    MainThread:35156 [wandb_setup.py:_flush():80] Loading settings from C:\Users\user\Desktop\project 465\wandb\settings
+2025-12-08 14:41:54,170 INFO    MainThread:35156 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2025-12-08 14:41:54,170 INFO    MainThread:35156 [wandb_init.py:setup_run_log_directory():714] Logging user logs to C:\Users\user\Desktop\project 465\wandb\run-20251208_144154-jd4xp9bc\logs\debug.log
+2025-12-08 14:41:54,170 INFO    MainThread:35156 [wandb_init.py:setup_run_log_directory():715] Logging internal logs to C:\Users\user\Desktop\project 465\wandb\run-20251208_144154-jd4xp9bc\logs\debug-internal.log
+2025-12-08 14:41:54,170 INFO    MainThread:35156 [wandb_init.py:monkeypatch_ipython():633] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000001348A416660>
+2025-12-08 14:41:54,171 INFO    MainThread:35156 [wandb_init.py:init():841] calling init triggers
+2025-12-08 14:41:54,171 INFO    MainThread:35156 [wandb_init.py:init():846] wandb.init called with sweep_config: {}
+config: {'epochs': 15, 'batch_size': 32, 'lr': 0.0001, '_wandb': {}}
+2025-12-08 14:41:54,171 INFO    MainThread:35156 [wandb_init.py:init():889] starting backend
+2025-12-08 14:41:56,600 INFO    MainThread:35156 [wandb_init.py:init():892] sending inform_init request
+2025-12-08 14:41:56,666 INFO    MainThread:35156 [wandb_init.py:init():900] backend started and connected
+2025-12-08 14:41:56,669 INFO    MainThread:35156 [wandb_run.py:_label_probe_notebook():1334] probe notebook
+2025-12-08 14:41:56,671 INFO    MainThread:35156 [wandb_init.py:init():970] updated telemetry
+2025-12-08 14:41:56,926 INFO    MainThread:35156 [wandb_init.py:init():994] communicating run to backend with 90.0 second timeout
+2025-12-08 14:41:58,162 INFO    MainThread:35156 [wandb_init.py:init():1041] starting run threads in backend
+2025-12-08 14:41:58,618 INFO    MainThread:35156 [wandb_run.py:_console_start():2521] atexit reg
+2025-12-08 14:41:58,618 INFO    MainThread:35156 [wandb_run.py:_redirect():2369] redirect: wrap_raw
+2025-12-08 14:41:58,618 INFO    MainThread:35156 [wandb_run.py:_redirect():2438] Wrapping output streams.
+2025-12-08 14:41:58,618 INFO    MainThread:35156 [wandb_run.py:_redirect():2461] Redirects installed.
+2025-12-08 14:41:58,622 INFO    MainThread:35156 [wandb_init.py:init():1081] run started, returning control to user process
+2025-12-08 14:41:58,622 INFO    MainThread:35156 [wandb_watch.py:_watch():68] Watching
+2025-12-08 14:43:24,775 ERROR   wandb-AsyncioManager-main:35156 [service_client.py:_forward_responses():77] Error reading server response.
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 73, in _forward_responses
+    while response := await self._read_server_response():
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 87, in _read_server_response
+    header = await self._reader.readexactly(_HEADER_BYTE_INT_LEN)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\asyncio\streams.py", line 769, in readexactly
+    await self._wait_for_data('readexactly')
+  File "C:\Users\user\anaconda3\Lib\asyncio\streams.py", line 539, in _wait_for_data
+    await self._waiter
+  File "C:\Users\user\anaconda3\Lib\asyncio\selector_events.py", line 1005, in _read_ready__data_received
+    data = self._sock.recv(self.max_size)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2025-12-08 14:43:24,780 INFO    wandb-AsyncioManager-main:35156 [mailbox.py:close():137] Closing mailbox, abandoning 1 handles.
+2025-12-08 14:43:24,861 ERROR   wandb-AsyncioManager-main:35156 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\user\anaconda3\Lib\asyncio\streams.py", line 374, in drain
+    raise exc
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 73, in _forward_responses
+    while response := await self._read_server_response():
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 87, in _read_server_response
+    header = await self._reader.readexactly(_HEADER_BYTE_INT_LEN)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\asyncio\streams.py", line 769, in readexactly
+    await self._wait_for_data('readexactly')
+  File "C:\Users\user\anaconda3\Lib\asyncio\streams.py", line 539, in _wait_for_data
+    await self._waiter
+  File "C:\Users\user\anaconda3\Lib\asyncio\selector_events.py", line 1005, in _read_ready__data_received
+    data = self._sock.recv(self.max_size)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2025-12-08 14:43:25,251 ERROR   wandb-AsyncioManager-main:35156 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\user\anaconda3\Lib\asyncio\streams.py", line 374, in drain
+    raise exc
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\user\anaconda3\Lib\asyncio\streams.py", line 374, in drain
+    raise exc
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 73, in _forward_responses
+    while response := await self._read_server_response():
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 87, in _read_server_response
+    header = await self._reader.readexactly(_HEADER_BYTE_INT_LEN)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\asyncio\streams.py", line 769, in readexactly
+    await self._wait_for_data('readexactly')
+  File "C:\Users\user\anaconda3\Lib\asyncio\streams.py", line 539, in _wait_for_data
+    await self._waiter
+  File "C:\Users\user\anaconda3\Lib\asyncio\selector_events.py", line 1005, in _read_ready__data_received
+    data = self._sock.recv(self.max_size)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2025-12-08 14:43:25,667 ERROR   wandb-AsyncioManager-main:35156 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\user\anaconda3\Lib\asyncio\streams.py", line 374, in drain
+    raise exc
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\user\anaconda3\Lib\asyncio\streams.py", line 374, in drain
+    raise exc
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Users\user\anaconda3\Lib\asyncio\streams.py", line 374, in drain
+    raise exc
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 73, in _forward_responses
+    while response := await self._read_server_response():
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\site-packages\wandb\sdk\lib\service\service_client.py", line 87, in _read_server_response
+    header = await self._reader.readexactly(_HEADER_BYTE_INT_LEN)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\asyncio\streams.py", line 769, in readexactly
+    await self._wait_for_data('readexactly')
+  File "C:\Users\user\anaconda3\Lib\asyncio\streams.py", line 539, in _wait_for_data
+    await self._waiter
+  File "C:\Users\user\anaconda3\Lib\asyncio\selector_events.py", line 1005, in _read_ready__data_received
+    data = self._sock.recv(self.max_size)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host

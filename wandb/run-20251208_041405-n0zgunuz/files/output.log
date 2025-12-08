@@ -1,0 +1,12 @@
+Epoch 1/1 Train:   0%|                                                                        | 0/4329 [00:00<?, ?it/s]
+Success! One sample loaded
+Raw shape: torch.Size([3, 224, 224]) Defect shape: torch.Size([3, 224, 224])
+Label: 8 → Class: Near-full
+DataLoader success!
+Batch raw shape: torch.Size([4, 3, 224, 224])
+Batch defect shape: torch.Size([4, 3, 224, 224])
+Batch labels: [8, 8, 1, 8]
+2.7.1+cu118
+True
+NVIDIA GeForce RTX 4050 Laptop GPU
+Using device: cuda
